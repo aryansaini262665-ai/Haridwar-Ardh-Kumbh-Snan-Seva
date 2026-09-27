@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed | Haridwar Sanan Seva</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f5f7f7;margin:0;padding:30px}.card{max-width:650px;margin:30px auto;background:#fff;padding:30px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08)}h1{text-align:center}.row{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:12px 0}.buttons{text-align:center;margin-top:25px}button{padding:12px 20px;border:0;border-radius:8px;cursor:pointer;margin:5px}</style>
+</head>
+<body>
+<div class="card">
+<h1>Booking Confirmed ✅</h1>
+<div id="details"></div>
+<div class="buttons"><button onclick="window.print()">Print / Save as PDF</button><button onclick="window.location.href='/'">Back to Website</button></div>
+</div>
+<script>
+const b=JSON.parse(localStorage.getItem('haridwarBooking')||'null');
+if(!b){document.getElementById('details').innerHTML='<p>Booking details not found.</p>';}else{
+const rows=[['Booking ID',b.bookingId],['Name',b.name],['Mobile',b.mobile],['Email',b.email],['Booking Date',b.date],['Persons',b.persons],['Amount','₹'+b.amount],['Payment Status',b.paymentStatus],['Booking Status',b.bookingStatus]];
+document.getElementById('details').innerHTML=rows.map(r=>`<div class="row"><strong>${r[0]}</strong><span>${r[1]}</span></div>`).join('');
+}
+</script>
+</body></html>

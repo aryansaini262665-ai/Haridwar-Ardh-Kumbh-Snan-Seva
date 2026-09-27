@@ -1,0 +1,11 @@
+HARIDWAR SANAN SEVA - RAZORPAY TEST SETUP
+
+1. Copy .env.example and rename the copy to .env
+2. Open .env and put your Razorpay TEST Secret Key after RAZORPAY_KEY_SECRET=
+3. Do NOT share the Secret Key.
+4. Open terminal in this folder.
+5. Run: npm install
+6. Run: npm start
+7. Open: http://localhost:3000
+
+The website uses the Razorpay TEST key. No real customer payment should be taken in test mode.
