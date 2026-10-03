@@ -1,5 +1,5 @@
 const pricePerPerson = 31;
-const RAZORPAY_KEY_ID = "rzp_test_TggOALhAYN0CxK";
+const RAZORPAY_KEY_ID = "rzp_live_Th3282LsPF2RIG";
 
 const personsSelect = document.getElementById("persons");
 const totalAmount = document.getElementById("totalAmount");
