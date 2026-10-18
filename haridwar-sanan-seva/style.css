@@ -1526,3 +1526,29 @@ select {
     }
 
 }
+.terms-policy,
+.terms-policy * {
+  font-size: 10px;
+  font-weight: normal;
+  color: inherit;
+  line-height: 1.4;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.terms-policy-content {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.terms-policy-content h4 {
+  font-size: 10px;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+.terms-policy-content p {
+  font-size: 10px;
+  margin: 4px 0;
+}
