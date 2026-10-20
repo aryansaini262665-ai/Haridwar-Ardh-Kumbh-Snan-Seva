@@ -1,7 +1,9 @@
+
 require("dotenv").config();
 const express = require("express");
 const crypto = require("crypto");
 const Razorpay = require("razorpay");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,6 +20,10 @@ const razorpay = new Razorpay({
 
 app.use(express.json());
 app.use(express.static(__dirname));
+
+app.get("/sitemap.xml", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "sitemap.xml"));
+});
 
 app.post("/api/create-order", async (req, res) => {
     try {
